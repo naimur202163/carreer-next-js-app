@@ -17,3 +17,24 @@ a {
 * {
   box-sizing: border-box;
 }
+/* Shape */
+.shape-1{
+  background-image: url('../assets/shape\ \(Traced\).png');
+    background-position: center;
+  background-repeat: no-repeat;
+}
+.shape-2{
+  background-image: url('../assets/shape\ \(Traced\).png');
+  background-repeat: no-repeat;
+}
+.shape-3{
+  background-position: right;
+  background-image: url('../assets/shape\ \(Traced\).png');
+  background-repeat: no-repeat;
+}
+
+.shape{
+  background-image: url('../assets/shape\ \(Traced\)1.png');
+    background-position: center;
+  background-repeat: no-repeat;
+}

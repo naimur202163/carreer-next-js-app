@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Center,
   Container,
   Grid,
   GridItem,
@@ -19,27 +20,33 @@ import logo8 from '../../../assets/Rectangle 6.png';
 import logo9 from '../../../assets/Screenshot 2022-01-07 at 12.59 1.png';
 function BannerTop() {
   return (
-    <div className="">
+    <div style={{ backgroundColor: '#F0F5FA ' }}>
       <Container maxWidth="975px">
         {/*  */}
         <SimpleGrid columns={[1, null, 2]} spacing="40px">
-          <Box>
+          <Box my={5}>
             <div>
               <Heading>Leave your mark</Heading>
-              <p>
-                At Engineer’s Cradle, we build products and services which allow
-                students to Engage with industrial mentors, jack st. agur blue
-                cheese melted cheese. Mascarpone cheesecake everyone loves feta
-                stilton caerphilly cheese and wine monterey jack. Mozzarella
-                ricotta monterey jack say cheese danish fontina manchego cow.
-                Chalk and cheese dolcelatte parmesan. Danish fontina edam
-                bavarian bergkase goat rubber cheese pepper jack st. agur blue
-                cheese melted cheese. Mascarpone cheesecake everyone loves feta
-                stilton caerphilly cheese and wine monterey jack. Mozzarella
-                ricotta monterey jack say cheese danish fontina manchego cow.
-              </p>
               <div>
-                <Button colorScheme="blue">See Open Roles</Button>
+                <p style={{ marginTop: '2rem' }} fontSize="xs">
+                  At Engineer’s Cradle, we build products and services which
+                  allow students to Engage with industrial mentors, jack st.
+                  agur blue cheese melted cheese. Mascarpone cheesecake everyone
+                  loves feta stilton caerphilly cheese and wine monterey jack.
+                  Mozzarella ricotta monterey jack say cheese danish fontina
+                  manchego cow. Chalk and cheese dolcelatte parmesan. Danish
+                  fontina edam bavarian bergkase goat rubber cheese pepper jack
+                  st. agur blue cheese melted cheese. Mascarpone cheesecake
+                  everyone loves feta stilton caerphilly cheese and wine
+                  monterey jack. Mozzarella ricotta monterey jack say cheese
+                  danish fontina manchego cow.
+                </p>
+              </div>
+
+              <div>
+                <Button mt={5} colorScheme="blue">
+                  See Open Roles
+                </Button>
               </div>
             </div>
           </Box>
