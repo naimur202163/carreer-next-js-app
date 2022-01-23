@@ -6,6 +6,9 @@ import {
   Box,
   SimpleGrid,
   Button,
+  VStack,
+  Stack,
+  HStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import Uix from '../../../assets/Other 20.png';
@@ -15,6 +18,45 @@ import Resources from '../../../assets/Badrun 1.png';
 import Analysis from '../../../assets/Other 01.png';
 import Sales from '../../../assets/Other 16.png';
 const Joureny = () => {
+  const data = [
+    {
+      Image: Uix,
+      Title: 'UI/UX',
+      Description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat tell us ultricies orci gravida purus orcisuspendisse. In',
+    },
+    {
+      Image: Research,
+      Title: 'Research',
+      Description:
+        'Placerat tell us ultricies orci gravida purus orcisuspendisse. In',
+    },
+    {
+      Image: Marketing,
+      Title: 'Marketing',
+      Description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat tell us ultricies orci gravida purus orcisuspendisse. In',
+    },
+    {
+      Image: Resources,
+      Title: 'Resources',
+      Description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat tell us ultricies orci gravida purus orcisuspendisse. In',
+    },
+    {
+      Image: Analysis,
+      Title: 'Analysis',
+      Description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat tell us ultricies orci gravida purus orcisuspendisse. In',
+    },
+    {
+      Image: Sales,
+      Title: 'Sales',
+      Description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat tell us ultricies orci gravida purus orcisuspendisse. In',
+    },
+  ];
+
   return (
     <div>
       <Container mt={5} maxWidth="975px">
@@ -28,127 +70,20 @@ const Joureny = () => {
           </Text>
         </Center>
         <Box>
-          <SimpleGrid mt={5} columns={[1, null, 3]} spacing={10}>
-            <Box>
-              <Box height="250px">
-                <Center>
-                  {' '}
-                  <Image src={Uix} alt="" />
+          <SimpleGrid columns={[1, 2, 3, 3]} gap={5}>
+            {data?.map((item, i) => (
+              <VStack key={i} spacing="3">
+                <Center boxSize="250px">
+                  <Image src={item?.Image} alt="" />
                 </Center>
-              </Box>
-              <Box mt={4}>
-                <Heading>
-                  <Center>UI/UX</Center>
-                </Heading>
-                <Center>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Placerat tell us ultricies orci gravida purus orci
-                    suspendisse. In
+                <VStack alignItems={`center`}>
+                  <Text fontWeight="bold" fontSize="2xl">
+                    {item?.Title}
                   </Text>
-                </Center>
-              </Box>
-            </Box>
-            <Box>
-              <Box height="250px">
-                <Center>
-                  {' '}
-                  <Image src={Research} alt="" />
-                </Center>
-              </Box>
-              <Box mt={4}>
-                <Heading>
-                  <Center>Research</Center>
-                </Heading>
-                <Center>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Placerat tell us ultricies orci gravida purus orci
-                    suspendisse. In
-                  </Text>
-                </Center>
-              </Box>
-            </Box>
-            <Box>
-              <Box height="250px">
-                <Center>
-                  {' '}
-                  <Image src={Marketing} alt="" />
-                </Center>
-              </Box>
-              <Box mt={4}>
-                <Heading>
-                  <Center>Marketing</Center>
-                </Heading>
-                <Center>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Placerat tell us ultricies orci gravida purus orci
-                    suspendisse. In
-                  </Text>
-                </Center>
-              </Box>
-            </Box>
-            <Box>
-              <Box height="250px">
-                <Center>
-                  {' '}
-                  <Image src={Resources} alt="" />
-                </Center>
-              </Box>
-              <Box mt={4}>
-                <Heading>
-                  <Center>Human Resource</Center>
-                </Heading>
-                <Center>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Placerat tell us ultricies orci gravida purus orci
-                    suspendisse. In
-                  </Text>
-                </Center>
-              </Box>
-            </Box>
-            <Box>
-              <Box height="250px">
-                <Center>
-                  {' '}
-                  <Image src={Analysis} alt="" />
-                </Center>
-              </Box>
-              <Box mt={4}>
-                <Heading>
-                  <Center>Internal Analysis</Center>
-                </Heading>
-                <Center>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Placerat tell us ultricies orci gravida purus orci
-                    suspendisse. In
-                  </Text>
-                </Center>
-              </Box>
-            </Box>
-            <Box>
-              <Box height="250px">
-                <Center>
-                  {' '}
-                  <Image src={Sales} alt="" />
-                </Center>
-              </Box>
-              <Box mt={4}>
-                <Heading>
-                  <Center>Sales</Center>
-                </Heading>
-                <Center>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Placerat tell us ultricies orci gravida purus orci
-                    suspendisse. In
-                  </Text>
-                </Center>
-              </Box>
-            </Box>
+                  <Text>{item?.Description}</Text>
+                </VStack>
+              </VStack>
+            ))}
           </SimpleGrid>
           <Box mt={5}>
             <Center>
